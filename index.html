@@ -1,0 +1,586 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#b79a88">
+
+<title>Ava Flowers | Official Website</title>
+<meta name="description" content="Welcome to the official world of Ava Flowers. A little mystery, a lot of me.">
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: #fff;
+  background: #a58c7d;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* BACKGROUND PHOTO */
+
+.background {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-image:
+    linear-gradient(
+      to bottom,
+      rgba(29,18,20,0.23),
+      rgba(29,18,20,0.40),
+      rgba(29,18,20,0.63)
+    ),
+    url("background.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* PAGE */
+
+.container {
+  width: 92%;
+  max-width: 470px;
+  margin: 0 auto;
+  padding: 30px 0 40px;
+}
+
+/* GLASS EFFECT */
+
+.glass {
+  background: rgba(255,255,255,0.17);
+  border: 1px solid rgba(255,255,255,0.42);
+  border-radius: 23px;
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.13);
+}
+
+/* HEADER */
+
+header {
+  text-align: center;
+  padding: 26px 14px 24px;
+  margin-bottom: 22px;
+}
+
+.eyebrow {
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: #fff3e9;
+  margin-bottom: 9px;
+}
+
+.logo {
+  margin: 0;
+  font-family: Baskerville, "Palatino Linotype",
+               "Book Antiqua", Georgia, serif;
+  font-size: clamp(43px, 11vw, 58px);
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: -1px;
+  line-height: 1.15;
+  color: #fff7ef;
+  text-shadow: 0 3px 14px rgba(0,0,0,0.28);
+}
+
+.tagline {
+  margin-top: 16px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.7px;
+  color: #fff0e7;
+}
+
+/* MAIN PORTRAIT */
+
+.hero {
+  position: relative;
+  height: 470px;
+  margin-bottom: 22px;
+  overflow: hidden;
+  border-radius: 24px;
+  border: 1px solid rgba(255,255,255,0.50);
+  background-color: #d4b5a7;
+  background-image: url("hero.jpg");
+  background-position: center 28%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.20);
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 60%,
+    rgba(0,0,0,0.36)
+  );
+}
+
+.hero-caption {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  right: 24px;
+  z-index: 1;
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 28px;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.6);
+}
+
+/* WELCOME */
+
+.welcome {
+  text-align: center;
+  padding: 27px 22px;
+  margin-bottom: 22px;
+}
+
+.welcome h2 {
+  margin: 0 0 12px;
+  font-family: Georgia, serif;
+  font-weight: normal;
+  font-style: italic;
+  font-size: 29px;
+}
+
+.welcome p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.8;
+  color: #fff8f4;
+}
+
+/* SOCIAL LINKS */
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.social-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 19px 23px;
+  width: 100%;
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  background: rgba(255,255,255,0.20);
+  border: 1px solid rgba(255,255,255,0.48);
+  border-radius: 18px;
+  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+  transition: background 0.2s, transform 0.2s;
+}
+
+.social-button:hover {
+  background: rgba(255,255,255,0.32);
+  transform: translateY(-2px);
+}
+
+.arrow {
+  font-size: 21px;
+  font-weight: normal;
+}
+
+/* EXCLUSIVE */
+
+.exclusive {
+  margin-top: 28px;
+  padding: 31px 24px;
+  text-align: center;
+  background: rgba(40,24,29,0.51);
+  border: 1px solid rgba(255,255,255,0.37);
+  border-radius: 24px;
+  -webkit-backdrop-filter: blur(17px);
+  backdrop-filter: blur(17px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.16);
+}
+
+.age-label {
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #ffe9db;
+}
+
+.exclusive h2 {
+  font-family: Georgia, serif;
+  font-size: 31px;
+  font-style: italic;
+  font-weight: normal;
+  margin: 16px 0;
+}
+
+.exclusive p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #fff4ed;
+}
+
+.exclusive-button {
+  display: block;
+  margin-top: 20px;
+  padding: 19px 14px;
+  background: rgba(255,255,255,0.93);
+  color: #35272c;
+  border-radius: 15px;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.exclusive-button:hover {
+  background: #fff;
+}
+
+.small-note {
+  font-size: 11px !important;
+  opacity: 0.85;
+}
+
+/* ABOUT */
+
+.about {
+  margin-top: 24px;
+  padding: 27px 23px;
+  text-align: center;
+}
+
+.about h2 {
+  font-family: Georgia, serif;
+  font-size: 28px;
+  font-style: italic;
+  font-weight: normal;
+  margin: 0 0 12px;
+}
+
+.about p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.8;
+  color: #fff8f4;
+}
+
+/* FOOTER */
+
+footer {
+  margin-top: 24px;
+  padding: 23px 12px;
+  text-align: center;
+  font-size: 12px;
+}
+
+footer a {
+  margin: 0 12px;
+  color: #fff;
+  text-underline-offset: 4px;
+}
+
+footer p {
+  margin: 13px 0 0;
+  opacity: 0.88;
+}
+
+/* AGE CONFIRMATION */
+
+dialog {
+  width: calc(100% - 32px);
+  max-width: 400px;
+  padding: 30px 25px;
+  border: none;
+  border-radius: 23px;
+  background: #f7eee9;
+  color: #34282c;
+  text-align: center;
+  box-shadow: 0 15px 55px rgba(0,0,0,0.30);
+}
+
+dialog::backdrop {
+  background: rgba(0,0,0,0.70);
+}
+
+dialog h2 {
+  font-family: Georgia, serif;
+  font-weight: normal;
+  font-size: 27px;
+}
+
+dialog p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #716368;
+}
+
+dialog button {
+  display: block;
+  width: 100%;
+  padding: 16px;
+  margin-top: 12px;
+  border: none;
+  border-radius: 13px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.yes-button {
+  background: #392b2e;
+  color: #fff;
+}
+
+.no-button {
+  background: #e9dfdb;
+  color: #392b2e;
+}
+
+/* MOBILE */
+
+@media (max-width: 480px) {
+  .container {
+    padding-top: 20px;
+  }
+
+  .hero {
+    height: 430px;
+  }
+
+  .tagline {
+    letter-spacing: 1px;
+  }
+
+  .hero-caption {
+    font-size: 25px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="background" aria-hidden="true"></div>
+
+<main class="container">
+
+  <!-- HEADER -->
+
+  <header class="glass">
+
+    <div class="eyebrow">
+      THE OFFICIAL WORLD OF
+    </div>
+
+    <h1 class="logo">Ava Flowers</h1>
+
+    <div class="tagline">
+      A LITTLE MYSTERY ✦ A LOT OF ME
+    </div>
+
+  </header>
+
+  <!-- MAIN PHOTO -->
+
+  <section
+    class="hero"
+    role="img"
+    aria-label="Portrait of Ava Flowers"
+  >
+    <div class="hero-caption">
+      Welcome to my world ♡
+    </div>
+  </section>
+
+  <!-- WELCOME -->
+
+  <section class="welcome glass">
+    <h2>Hey, I'm Ava ♡</h2>
+    <p>
+      A little mystery, beautiful moments
+      and more of my world.
+      Find all my official links here.
+    </p>
+  </section>
+
+  <!-- SOCIAL MEDIA -->
+
+  <nav class="social-links" aria-label="Social media">
+
+    <a
+      class="social-button"
+      href="https://www.instagram.com/avaflowers66/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <span>Instagram ♡</span>
+      <span class="arrow">↗</span>
+    </a>
+
+    <a
+      class="social-button"
+      href="https://x.com/flowersava90393"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <span>X / Twitter</span>
+      <span class="arrow">↗</span>
+    </a>
+
+    <a
+      class="social-button"
+      href="https://www.tiktok.com/@ava.flowers7"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <span>TikTok ✨</span>
+      <span class="arrow">↗</span>
+    </a>
+
+  </nav>
+
+  <!-- EXCLUSIVE 18+ -->
+
+  <section class="exclusive">
+
+    <div class="age-label">
+      EXCLUSIVE • ADULTS ONLY • 18+
+    </div>
+
+    <h2>A Little More of Me ♡</h2>
+
+    <p>
+      Discover my exclusive content
+      on my official adult platform.
+    </p>
+
+    <a
+      class="exclusive-button"
+      href="https://onlyfans.com/avaflowers666"
+      id="exclusiveLink"
+    >
+      Explore Exclusive Content →
+    </a>
+
+    <p class="small-note">
+      Adults only. You must be at least 18
+      or the legal age of majority in your location.
+    </p>
+
+  </section>
+
+  <!-- ABOUT -->
+
+  <section class="about glass">
+
+    <h2>About Ava ♡</h2>
+
+    <p>
+      A little mystery, a little charm
+      and moments worth sharing.
+      Thank you for being here!
+    </p>
+
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer class="glass">
+
+    <div>
+      <a href="imprint.html">Imprint</a>
+      <a href="privacy.html">Privacy</a>
+    </div>
+
+    <p>
+      © <span id="year">2026</span>
+      Ava Flowers. All rights reserved.
+    </p>
+
+  </footer>
+
+</main>
+
+<!-- AGE CONFIRMATION -->
+
+<dialog id="ageDialog">
+
+  <h2>Are you 18 or older?</h2>
+
+  <p>
+    You are about to visit an external
+    platform intended for adults.
+  </p>
+
+  <button
+    class="yes-button"
+    id="confirmAge"
+    type="button"
+  >
+    Yes, I'm 18+ — Continue
+  </button>
+
+  <button
+    class="no-button"
+    id="cancelAge"
+    type="button"
+  >
+    No, go back
+  </button>
+
+</dialog>
+
+<script>
+
+const ONLYFANS_URL =
+  "https://onlyfans.com/avaflowers666";
+
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+
+const ageDialog =
+  document.getElementById("ageDialog");
+
+document.getElementById("exclusiveLink")
+  .addEventListener("click", function(event) {
+    event.preventDefault();
+    ageDialog.showModal();
+  });
+
+document.getElementById("confirmAge")
+  .addEventListener("click", function() {
+    ageDialog.close();
+    window.location.href = ONLYFANS_URL;
+  });
+
+document.getElementById("cancelAge")
+  .addEventListener("click", function() {
+    ageDialog.close();
+  });
+
+</script>
+
+</body>
+</html>
